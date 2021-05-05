@@ -132,7 +132,7 @@ time and the location time of the location.
             	var offsets = output.dstOffset * 1000 + output.rawOffset * 1000 // get DST and time zone offsets in milliseconds
             	var localdate = new Date(timestamp * 1000 + offsets) // Date object containing current time of Tokyo (timestamp + dstOffset + rawOffset)
             	console.log(loc) 
-           	 	//alert("The local time is " + localdate.toLocaleString());
+           	 	
             	document.getElementById("local_time").innerHTML = "Local Time: " + localdate.toLocaleString() + " " + output.timeZoneName;
             	document.getElementById("utc").innerHTML = "UTC Time: " + (localdate.getUTCMonth() + 1) + "/" + localdate.getUTCDate() + "/" + localdate.getUTCFullYear() + ", " + localdate.getUTCHours() + ":" + localdate.getUTCMinutes() + ":" + localdate.getUTCSeconds() + " UTC";
         	}
